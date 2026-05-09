@@ -173,17 +173,49 @@ body{
 .social-links a {
   font-size: 24px;
   text-decoration: none;
-  color: #333;
   padding: 10px;
   border-radius: 50%;
   background: #ffffff;
   transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-links a:hover {
-  background: #e91e63;
-  color: #ffffff;
   transform: translateY(-2px);
+}
+
+.social-links a .fab,
+.social-links a .fas {
+  color: white; /* Default color for icons */
+  font-size: 20px;
+}
+
+/* Specific colors for each icon */
+.social-links a[href*="x.com"] {
+  background-color: #1DA1F2; /* Twitter */
+}
+
+.social-links a[href*="facebook.com"] {
+  background-color: #3b5998; /* Facebook */
+}
+
+.social-links a[href*="instagram.com"] {
+  background-color: #E1306C; /* Instagram */
+}
+
+.social-links a[href*="wa.me"] {
+  background-color: #25D366; /* WhatsApp */
+}
+
+.social-links a[href*="mailto:"] {
+  background-color: #0077B5; /* Email - Blue color */
+}
+
+.social-links a:hover .fab,
+.social-links a:hover .fas {
+  color: #ffffff; /* White icon color on hover */
 }
 
 @media (max-width: 600px) {
@@ -195,7 +227,6 @@ body{
   .social-links a {
     width: 44px;
     height: 44px;
-    text-align: center;
     font-size: 18px;
   }
 }
