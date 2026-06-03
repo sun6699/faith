@@ -302,3 +302,39 @@ body{
 }
 
 
+
+.leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.leader-card {
+  background: #ffffff;
+  padding: 36px 24px;
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.leader-card img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ffffff;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+  margin-bottom: 16px;
+}
+
+.leader-card h3 {
+  margin: 12px 0 6px;
+  font-size: 20px;
+}
+
+.leader-card p {
+  margin: 0;
+  font-size: 15px;
+  color: #666;
+}
