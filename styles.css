@@ -338,3 +338,85 @@ body{
   font-size: 15px;
   color: #666;
 }
+
+
+
+.hero {
+  position: relative;
+  min-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-img.active {
+  opacity: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: white;
+}
+
+
+
+.hero-content h1 {
+  color: #ffffff;
+}
+
+.hero-content .lead {
+  color: #ffd700;
+}
+
+.hero-content .kicker {
+  color: #4ade80;
+}
+
+aside {
+  background: #fef3c7;
+  border-left: 5px solid #f59e0b;
+  padding: 25px;
+  border-radius: 12px;
+  color: #1f2937;
+}
+
+aside h3 {
+  color: #b45309;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+aside p {
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+#donate-section {
+  color: #92400e;
+}

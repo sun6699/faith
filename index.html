@@ -12,6 +12,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -41,20 +42,30 @@
   </header>
 
   <main>
-    <!-- Hero -->
-    <section id="home" class="hero">
-      <img src="assets/hero-image banner.jpeg" alt="Hero image" class="hero-img" />
-      <div class="hero-content container">
-        <h1>Fadora Champions Initiative for Advocacy & Social Impact</h1>
-        <p class="lead">Empowering dignity, safety, and opportunity for women, girls, and communities.</p>
-        <p class="kicker">Menstrual Health • GBV Prevention • Leadership • Inclusion</p>
-        <div class="hero-ctas">
-          <a class="btn-primary" href="#get-involved">Partner With Us</a>
-          <a class="btn-ghost" href="#donate">Support Our Work</a>
-        </div>
-      </div>
-    </section>
 
+    <!-- Hero -->
+<section id="home" class="hero">
+
+  <div class="hero-slider">
+    <img src="assets/hero-image-1.jpeg" class="hero-img active" alt="Hero image 1">
+    <img src="assets/hero-image-2.jpeg" class="hero-img" alt="Hero image 2">
+    <img src="assets/hero-image-3.jpeg" class="hero-img" alt="Hero image 3">
+    <img src="assets/hero-image-4.jpeg" class="hero-img" alt="Hero image 4">
+    <img src="assets/hero-image-5.jpeg" class="hero-img" alt="Hero image 5">
+    <img src="assets/hero-image-6.jpeg" class="hero-img" alt="Hero image 6">
+  </div>
+
+  <div class="hero-content container">
+    <h1>Fadora Champions Initiative for Advocacy & Social Impact</h1>
+    <p class="lead">Empowering dignity, safety, and opportunity for women, girls, and communities.</p>
+    <p class="kicker">Menstrual Health • GBV Prevention • Leadership • Inclusion</p>
+    <div class="hero-ctas">
+      <a class="btn-primary" href="#get-involved">Partner With Us</a>
+      <a class="btn-ghost" href="#donate">Support Our Work</a>
+    </div>
+  </div>
+
+</section>
     <!-- Who We Are -->
     <section id="about" class="section container">
       <div class="split">
@@ -374,10 +385,11 @@
 
         <aside>
           <h3 id="donate-section">Donations</h3>
-          <p>Account name : fadora champion initiative for advocacy and social impact
-
-              Account number: 2008508446 
-              Bank Name: fcmb</p>
+          <p>
+          <strong>Account name:</strong> Fadora Champion Initiative for Advocacy and Social Impact<br>
+          <strong>Account number:</strong> 2008508446<br>
+          <strong>Bank Name:</strong> FCMB
+</p>
           <p><strong></strong> </p>
         </aside>
       </div>
@@ -408,5 +420,18 @@
     - Replace copy as needed. To add more gallery images, duplicate a button.gallery-item with a new image.
     - For production: add proper alt text for each image, integrate analytics and a real contact/donation backend.
   -->
+
+  <script>
+const slides = document.querySelectorAll(".hero-img");
+let currentSlide = 0;
+
+setInterval(() => {
+  slides[currentSlide].classList.remove("active");
+
+  currentSlide = (currentSlide + 1) % slides.length;
+
+  slides[currentSlide].classList.add("active");
+}, 4000);
+</script>
 </body>
 </html>
